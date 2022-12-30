@@ -6,35 +6,40 @@
     font-family: 'Spartan', sans-serif;
 }
 
-.logo {
-    height: 5em;
-    width: 5em;
+.navbar-logo {
+    width: 75px;
+    height: auto;
+    margin: 0;
 }
 
-#header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 80px;
-    background: #967070;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+.navbar-brand {
+  margin: 0;
+  width: 25%;
 }
 
-#navbar {
+.container-fluid{
+  background-color: #967070;
+}
+
+#navbarNav {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 200px;
 
 }
 
-#navbar li{
+.nav-item {
+  display: inline;
+  font-size: 1.25em;
+}
+
+#navbarNav li{
     list-style: none;
     padding: 0 20px;
     position: relative;
 }
 
-#navbar li a{
+#navbarNav li a{
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
@@ -42,13 +47,13 @@
     transition: 0.3s ease;
 }
 
-#navbar li a:hover,
-#navbar li a.active {
+#navbarNav li a:hover,
+#navbarNav li a.active {
     color: plum;
 }
 
-#navbar li a.active::after,
-#navbar li a:hover::after{
+#navbarNav li a.active::after,
+#navbarNav li a:hover::after{
     content: "";
     width: 30%;
     height: 2px;
@@ -59,45 +64,59 @@
 }
 
 
-.imageContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.image{
-    max-width: 400px;
-}
-
-
 #welcome h1 {
+margin: 10px;
 text-align: center;
-font-size: 48px;
-padding: 20px 20px;
+font-size: 3em;
 }
 
 #welcome h3 {
+margin: 10px;
 text-align: center;
-font-size: 32px;
+font-size: 2em;
 }
 
+.slide {
+  width: 75%;
+  margin: 10px;
+  display: block;
+  display: inline-block;
+}
 
-@media (max-width: 375px) {
-    #header {
-      width: 800px;
-      padding: 10px 30px;
-    }
+#welcome {
+  text-align: center;
+}
 
-    #welcome h1{
-      display: flex;
-      justify-content: center;
-      margin-left: 389px;
-    }
-    #welcome h3{
-      display: flex;
-      justify-content: center;
-      margin-left: 389px;
-      font-size: 21px;
-    }
+@media only screen and (min-width: 700px) {
+   .navbar-logo {
+    width: 125px;
+    height: auto;
+    margin: 0;
+   }
+
+   .navbar-brand {
+    margin: 0;
+    width: 25%;
+   }
+
+   .slide {
+    width: 50%;
+    max-width: 500px;
+    float: left;
+    display: block;
+   }
+
+   #welcome h1 {
+    margin: 20px;
+    text-align: center;
+    font-size: 3em;
+   }
+
+   #welcome h3 {
+    margin: 20px;
+    text-align: center;
+    font-size: 2em;
+   }
 }
 
 #banner {
